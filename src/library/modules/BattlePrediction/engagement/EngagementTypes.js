@@ -170,8 +170,9 @@
         openingAtack: create('openingAtack', bind(parseRaigeki, battleType)),
         support: create('support', parseCombinedSupport),
         nSupport: create('nSupport', parseCombinedSupport),
-        hougeki1: create('nHougeki1', bind(parseHougeki, battleType)),
-        hougeki2: create('nHougeki2', bind(parseHougeki, battleType)),
+        nHougeki1: create('nHougeki1', bind(parseHougeki, battleType)),
+        nHougeki2: create('nHougeki2', bind(parseHougeki, battleType)),
+        hougeki1: create('hougeki1', bind(parseHougeki, battleType)),
       };
     },
 

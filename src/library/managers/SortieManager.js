@@ -435,7 +435,7 @@ Stores and manages states and functions during sortie of fleets (including PvP b
 		},
 
 		getRetreatedShip: function (escapeIdx) {
-			if (!apiData) { return undefined; }
+			if (!escapeIdx) { return undefined; }
 
 			const shipIndex = escapeIdx[0];
 			if (PlayerManager.combinedFleet && shipIndex > 6) {
