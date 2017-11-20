@@ -441,7 +441,7 @@ Stores and manages states and functions during sortie of fleets (including PvP b
 			if (PlayerManager.combinedFleet && shipIndex > 6) {
 				return PlayerManager.fleets[this.fleetSent].ship(shipIndex - 7).rosterId;
 			}
-			return PlayerManager.fleets(this.fleetSent - 1).ship(shipIndex - 1).rosterId;
+			return PlayerManager.fleets[this.fleetSent - 1].ship(shipIndex - 1).rosterId;
 		},
 		
 		sendFCFHome :function(){
