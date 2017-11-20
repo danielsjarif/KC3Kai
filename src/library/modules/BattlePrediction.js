@@ -591,7 +591,7 @@
       const { bind } = KC3BattlePrediction;
       const {
         kouku: { parseKouku },
-        support: { parseSupport },
+        support: { parseCombinedSupport },
         hougeki: { parseHougeki },
         raigeki: { parseRaigeki },
       } = KC3BattlePrediction.battle.phases;
@@ -601,10 +601,11 @@
         kouku: create('kouku', parseKouku),
         openingTaisen: create('openingTaisen', bind(parseHougeki, battleType)),
         openingAtack: create('openingAtack', bind(parseRaigeki, battleType)),
-        support: create('support', parseSupport),
-        nSupport: create('nSupport', parseSupport),
-        hougeki1: create('nHougeki1', bind(parseHougeki, battleType)),
-        hougeki2: create('nHougeki2', bind(parseHougeki, battleType)),
+        support: create('support', parseCombinedSupport),
+        nSupport: create('nSupport', parseCombinedSupport),
+        nHougeki1: create('nHougeki1', bind(parseHougeki, battleType)),
+        nHougeki2: create('nHougeki2', bind(parseHougeki, battleType)),
+        hougeki1: create('hougeki1', bind(parseHougeki, battleType)),
       };
     },
 
